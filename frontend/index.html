@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/src/output.css" rel="stylesheet">
-    <title>Resume Templates</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="/src/output.css" rel="stylesheet" />
+  <title>Resume Templates</title>
 </head>
 <body class="bg-gray-100 min-h-screen flex flex-col items-center justify-start p-8 space-y-8">
 
-      
-    <h1 class="text-4xl font-bold text-blue-700">Resume Templates</h1>
+  <h1 class="text-4xl font-bold text-blue-700">Resume Templates</h1>
 
-     <div id="category-buttons" class="flex flex-wrap gap-4">
+  <div id="category-buttons" class="flex flex-wrap gap-4">
     <!-- Buttons will go here dynamically -->
   </div>
 
@@ -24,10 +23,10 @@
   <script>
     const categories = [
       "Generic", 
-      "Education", 
       "Accountancy", 
       "IT", 
-      "Civil Engineering"
+      "Civil Engineering", 
+      "Business Administration"
     ];
 
     const categoryContainer = document.getElementById("category-buttons");
@@ -42,28 +41,38 @@
     });
 
     function showTemplates(category) {
-      templateContainer.innerHTML = "";
+    templateContainer.innerHTML = "";
 
-      const row = document.createElement("div");
-      row.className = "grid grid-cols-2 gap-3";
+    const row = document.createElement("div");
+    row.className = "grid grid-cols-2 gap-3";
 
-      // Display label & file-safe prefix
-      const labelPrefix = category === "Civil Engineering" ? "CV" : category.replace(/\s+/g, "");
-      const displayName = category === "Civil Engineering" ? "CV" : category;
+    let labelPrefix;
+    let displayName;
 
-      for (let i = 1; i <= 10; i++) {
-        const tBtn = document.createElement("button");
-        tBtn.className = "bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded shadow w-full text-left";
-        tBtn.textContent = `${displayName} Template ${i}`;
-        tBtn.addEventListener("click", () => {
-          const fileName = `${labelPrefix}Template${i}.html`;
-          window.location.href = `load-template.html?file=${fileName}`;
-        });
-        row.appendChild(tBtn);
-      }
-
-      templateContainer.appendChild(row);
+    if (category === "Civil Engineering") {
+      labelPrefix = "CV";
+      displayName = "CV";
+    } else if (category === "Business Administration") {
+      labelPrefix = "BA";
+      displayName = "BA";
+    } else {
+      labelPrefix = category.replace(/\s+/g, "");
+      displayName = category;
     }
+
+    for (let i = 1; i <= 10; i++) {
+      const tBtn = document.createElement("button");
+      tBtn.className = "bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded shadow w-full text-left";
+      tBtn.textContent = `${displayName} Template ${i}`;
+      tBtn.addEventListener("click", () => {
+        const fileName = `${labelPrefix}Template${i}.html`;
+        window.location.href = `load-template.html?file=${fileName}`;
+      });
+      row.appendChild(tBtn);
+    }
+
+    templateContainer.appendChild(row);
+  }
   </script>
 </body>
 </html>
