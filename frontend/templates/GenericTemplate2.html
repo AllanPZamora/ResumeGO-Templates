@@ -8,41 +8,52 @@
 </head>
 <body class="bg-white flex justify-center py-10">
   <div class="w-full max-w-[210mm] bg-white p-8 shadow-md">
+    
     <!-- Header -->
-    <div class="grid grid-cols-2 gap-6 mb-6">
-      <!-- Left: Image -->
-      <div class="flex items-start">
-        <img src="/imgs/charles.png" alt="Profile Photo" class="w-32 h-32 object-cover rounded-full">
-      </div>
-      <!-- Right: Name and Contact Info -->
-      <div>
-        <h1 class="text-3xl font-bold text-green-700">Janine Nel</h1>
-        <p class="text-xl text-gray-700 mb-4">Sales Engineer</p>
-        <p class="text-sm text-gray-600">1515 Pacific Ave, Los Angeles, CA 90291, United States</p>
-        <p class="text-sm text-gray-600">3868683442</p>
-        <p class="text-sm text-gray-600">email@email.com</p>
-      </div>
-    </div>
+<div class="grid grid-cols-[30%_70%] gap-6 mb-6">
+  <!-- Left: Image -->
+  <div class="flex items-start">
+    <img src="/imgs/charles.png" alt="Profile Photo" class="w-32 h-32 border object-cover">
+  </div>
 
-    <!-- Body: 2 Column Layout -->
-    <div class="grid grid-cols-2 gap-6">
+  <!-- Right: Name and Contact Info -->
+  <div class="space-y-2 text-left">
+    <h1 class="text-3xl font-bold text-green-700">Janine Nel</h1>
+    <p class="text-xl text-gray-700">Sales Engineer</p>
+
+    <div class="mt-4 space-y-1">
+      <p class="text-sm text-gray-600">1515 Pacific Ave, Los Angeles, CA 90291, United States</p>
+      <p class="text-sm text-gray-600">3868683442</p>
+      <p class="text-sm text-gray-600">email@email.com</p>
+    </div>
+  </div>
+</div>
+
+    <!-- Body: 2 Column Layout (30% / 70%) -->
+    <div class="grid grid-cols-[30%_70%] gap-6">
+      
       <!-- Left Column -->
       <div class="space-y-4">
         <div>
           <h2 class="text-lg font-semibold text-gray-800">Place of Birth</h2>
           <p class="text-sm text-gray-700">San Antonio</p>
         </div>
-        <div>
-          <h2 class="text-lg font-semibold text-gray-800">Driving License</h2>
-          <p class="text-sm text-gray-700">Full</p>
-        </div>
+
         <div>
           <h2 class="text-lg font-semibold text-gray-800">Languages</h2>
-          <p class="text-sm text-gray-700">English, Dutch</p>
+          <ul class="list-disc list-inside text-sm text-gray-700">
+            <li>English</li>
+            <li>Dutch</li>
+          </ul>
         </div>
+
         <div>
           <h2 class="text-lg font-semibold text-gray-800">Hobbies</h2>
-          <p class="text-sm text-gray-700">Piano, Debate, Triathlon</p>
+          <ul class="list-disc list-inside text-sm text-gray-700">
+            <li>Piano</li>
+            <li>Debate</li>
+            <li>Triathlon</li>
+          </ul>
         </div>
       </div>
 
