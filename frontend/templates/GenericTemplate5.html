@@ -5,9 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/src/output.css" rel="stylesheet">
     <title>Generic Template no 5</title>
+
+<style>
+  .resume-container {
+    width: 210mm;
+    max-width: 210mm;
+    min-width: 210mm;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 1024px) {
+    .resume-container {
+      transform: scale(0.8);
+      transform-origin: top center;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .resume-container {
+      transform: scale(0.6);
+      transform-origin: top center;
+    }
+  }
+</style>
+
+
 </head>
  <body class="bg-white text-gray-800 font-serif">
-    <div class="max-w-[210mm] mx-auto p-10 flex flex-col">
+    <div class="resume-container mx-auto p-10 flex flex-col">
       <!-- Header with Image + Contact Info -->
       <div class="flex items-center justify-between mb-10">
         <div class="flex items-center space-x-6">
