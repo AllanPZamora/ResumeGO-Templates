@@ -6,24 +6,37 @@
     <link href="/src/output.css" rel="stylesheet">
     <title>IT Template No 1</title>
     
-    <style>
-      /* Auto-fit resume width to the screen */
-      div.w-\[210mm\] {
-        width: 210mm;                /* A4 width on desktop */
-        max-width: 100%;             /* never exceed screen width */
-      }
 
-      @media (max-width: 1024px) {
-        div.w-\[210mm\] {
-          width: 100%;               /* shrink to screen width */
-          transform: none;           /* remove manual scaling */
-        }
+  <style>
+    /* Always keep resume fixed A4 width */
+    .resume-container {
+      width: 210mm;
+      max-width: 210mm;
+      min-width: 210mm;
+      margin: 0 auto;
+    }
+
+    /* Scale down on tablets */
+    @media (max-width: 1024px) {
+      .resume-container {
+        transform: scale(0.8);
+        transform-origin: top center;
       }
-    </style>
+    }
+
+    /* Scale down more on phones */
+    @media (max-width: 600px) {
+      .resume-container {
+        transform: scale(0.6);
+        transform-origin: top center;
+      }
+    }
+  </style>
+
 
 </head>
 <body class="bg-[#fdfaf8] font-sans overflow-x-auto">
-  <div class="min-w-[210mm] max-w-[210mm] w-[210mm] mx-auto bg-[#fdfaf8] shadow-md pb-8">
+  <div class="resume-container min-w-[210mm] max-w-[210mm] w-[210mm] mx-auto bg-[#fdfaf8] shadow-md pb-8">
 
 
     <!-- HEADER -->

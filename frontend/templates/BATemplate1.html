@@ -5,12 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/src/output.css" rel="stylesheet" />
     <title>BA Template No 1</title>
+
+<style>
+  .resume-container {
+    width: 210mm;
+    max-width: 210mm;
+    min-width: 210mm;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 1024px) {
+    .resume-container {
+      transform: scale(0.8);
+      transform-origin: top center;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .resume-container {
+      transform: scale(0.6);
+      transform-origin: top center;
+    }
+  }
+</style>
+
   </head>
-<body class="bg-white flex justify-center py-10">
-  <div class="max-w-[210mm] w-full font-sans text-black shadow-md flex overflow-hidden"> 
+<body class="bg-white justify-center py-10">
+  <div class="resume-container w-full font-sans text-black shadow-md flex overflow-hidden"> 
     
       <!-- Left Sidebar -->
-      <div class="w-1/3 pr-6 border-r border-orange-500">
+      <div class="w-1/3 pr-6 border-r border-orange-500 pl-4">
         <div class="flex justify-center">
           <div class="border-[10px] border-orange-500 rounded-full w-40 h-40 overflow-hidden">
             <img src="/imgs/charles.png" alt="Profile" class="w-full h-full object-cover" />
