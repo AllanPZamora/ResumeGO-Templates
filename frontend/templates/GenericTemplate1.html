@@ -5,10 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/src/output.css" rel="stylesheet">
     <title>Generic Template No 1</title>
+
+<style>
+  .resume-container {
+    width: 210mm;
+    max-width: 210mm;
+    min-width: 210mm;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 1024px) {
+    .resume-container {
+      transform: scale(0.8);
+      transform-origin: top center;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .resume-container {
+      transform: scale(0.6);
+      transform-origin: top center;
+    }
+  }
+</style>
+
+
 </head>
 <body class="bg-[#fdfaf8] text-gray-800">
-
-  <div class="max-w-[210mm] mx-auto bg-white shadow-lg p-8 space-y-6">
+  <div class="resume-container mx-auto bg-white shadow-lg p-8 space-y-6">
     
     <!-- 🔹 Profile Section (Top) -->
     <div class="flex items-center gap-4">
